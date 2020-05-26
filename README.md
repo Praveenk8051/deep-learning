@@ -24,4 +24,8 @@ Please find the folders present and direct access to code.
 
 The Object detection based code is written using PyTorch. The Pytorch provides torchvision library which has flexible apis to create great working model with high accuracy. Find the explanation and compact code [here](https://github.com/Praveenk8051/deep-learning/blob/master/main_script_pytorch.ipynb)
 
+```Centroid_Resolution.ipynb``` : Object detection related script
+
+This notebook helps in finding the centroid of the bounding boxes in an image. This helps in analysing and balancing the bboxes in the image. It also shows the code to plot resolutions of images if there are of different sizes. And plot number of images in the range. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/Centroid_Resolution.ipynb)
+
 
