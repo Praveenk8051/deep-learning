@@ -20,12 +20,39 @@ Please find the folders present and direct access to code.
   
   Blog can be found [here](https://medium.com/@praveenkrishna/automating-the-matched-filter-using-neural-nets-73c753615845)
 
-```main_script_pytorch.ipynb``` : This is a object detection based script.
+```classification_scripts``` : the generic classification script as a notebook. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/classification_scripts/pytorch_classification_generic.ipynb)
+* The script follows below following aspects.
 
-The Object detection based code is written using PyTorch. The Pytorch provides torchvision library which has flexible apis to create great working model with high accuracy. Find the explanation and compact code [here](https://github.com/Praveenk8051/deep-learning/blob/master/main_script_pytorch.ipynb)
+> compute and plot means and std deviation of all images
 
-```Centroid_Resolution.ipynb``` : Object detection related script
+> split dataset in train, test and validation
 
-This notebook helps in finding the centroid of the bounding boxes in an image. This helps in analysing and balancing the bboxes in the image. It also shows the code to plot resolutions of images if there are of different sizes. And plot number of images in the range. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/Centroid_Resolution.ipynb)
+> option to fine-tune or perform transfer learning
+
+> option to load different architectures like resnet, densenet, vgg, inception..,
+
+> perform training
+
+> visualize the confusion matrix 
+
+> test
+
+> view classification report
 
 
+
+```Object_detection_scripts```: The object detection script to check various scenarios and load and train based on pretrained network
+
+* `Centroid_Resolution.ipynb` : This notebook helps in finding the centroid of the bounding boxes in an image. This helps in analysing and balancing the bboxes in the image. It also shows the code to plot resolutions of images if there are of different sizes. And plot number of images in the range. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/Centroid_Resolution.ipynb)
+
+
+* `main_script_pytorch.ipynb` : The Object detection based code is written using PyTorch. The Pytorch provides torchvision library which has flexible apis to create great working model with high accuracy. Find the explanation and compact code [here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/main_script_pytorch.ipynb)
+
+
+* `split_data.ipynb`: split the images and xml files created for the object detection. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/split_data.ipynb)
+
+
+* `xml_to_pkl.ipynb`: Convert the xml files to pickle or csv files. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/xml_to_pkl.ipynb)
+
+
+* `pkl_tfrecords.ipynb`: Convert the pickle or csv files to tensorflow records[. The code for the same can be found here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/pkl_tfrecords.ipynb)
