@@ -55,4 +55,4 @@ Please find the folders present and direct access to code.
 * `xml_to_pkl.ipynb`: Convert the xml files to pickle or csv files. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/xml_to_pkl.ipynb)
 
 
-* `pkl_tfrecords.ipynb`: Convert the pickle or csv files to tensorflow records[. The code for the same can be found here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/pkl_tfrecords.ipynb)
+* `pkl_tfrecords.ipynb`: Convert the pickle or csv files to tensorflow records. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/object_detection_scripts/pkl_tfrecords.ipynb)
