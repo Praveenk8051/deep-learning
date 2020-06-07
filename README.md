@@ -21,7 +21,7 @@ Please find the folders present and direct access to code.
   Blog can be found [here](https://medium.com/@praveenkrishna/automating-the-matched-filter-using-neural-nets-73c753615845)
 
 ```classification_scripts``` : the generic classification script as a notebook. The code for the same can be found [here](https://github.com/Praveenk8051/deep-learning/blob/master/classification_scripts/pytorch_classification_generic.ipynb)
-* The script follows below following aspects.
+* The script has below following aspects.
 
 > compute and plot means and std deviation of all images
 
