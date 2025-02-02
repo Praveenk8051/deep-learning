@@ -123,29 +123,5 @@ plt.draw()
 
 plt.show()
 
-"""
-
-Steps :
-Import data
-Parameters initialization (LR, epochs, batch size)
-Network Params
-Graph Input
-Model Weights, biases
-Build the encoder
-Build the decoder
-Model Construction - Call the encoder, decoder
-Calculate the cost, optimize it
-Initialize all Variables- (init = tf.global_variables_initializer())
-
-Launch the graph
-Training cycle 
-	Loop over all batches
-		Run optimization(backprop) and cost op(loss value)
-	Display logs
-		
-Test
-Comparison of Original images with reconstructions
-"""
-
 
 

@@ -1,6 +1,6 @@
 
 """
-# Few points about Linear Regression:
+Few points about Linear Regression:
 >Linear approach to modelling the relationship between dependent variable and one or more independent variables. 
 >The case of one independent variable is called Simple Linear Regression
 >For more than one independent variable, the process is called Multiple Linear Regression
@@ -13,12 +13,6 @@ import tensorflow as tf
 import numpy
 import matplotlib.pyplot as plt
 rng = numpy.random
-
-
-# In[12]:
-
-
-#matplotlib.pyplot
 
 #is a collection of command style functions that make matplotlib work like MATLAB.
 #Each pyplot function makes some change to a figure: 
@@ -33,10 +27,6 @@ plt.show()
 learning_rate = 0.01
 training_epochs = 1000
 display_step = 50
-
-
-# In[14]:
-
 
 # Training Data
 train_X = numpy.asarray([3.3,4.4,5.5,6.71,6.93,4.168,9.779,6.182,7.59,2.167,
@@ -99,19 +89,3 @@ with tf.Session() as sess:
     plt.plot(train_X, sess.run(W) * train_X + sess.run(b), label='Fitted line')
     plt.legend()
     plt.show()
-
-"""
-# Summarized Data
-Import libraries
-Generate random labels and inputs
-Graph Input
-Model Weights
-Linear Model Construction
-Cost Function
-Gradient descent
-Initialize all variables
-Launch the graph
-Loop over all Training data
-	Display logs per epochs
-	Graph display
- """

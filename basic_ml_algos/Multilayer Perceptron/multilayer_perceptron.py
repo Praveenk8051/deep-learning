@@ -1,26 +1,13 @@
-
-# coding: utf-8
-
-# In[ ]:
-
-
+"""
 MLP: 
     Neural Network Architecture, I-H-O Layers
     Supervised Learning
-
-
-# In[1]:
-
-
+"""
 # Import MINST data
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 import tensorflow as tf
-
-
-# In[2]:
-
 
 # Parameters
 learning_rate = 0.001
@@ -38,10 +25,6 @@ n_classes = 10 # MNIST total classes (0-9 digits)
 x = tf.placeholder("float", [None, n_input])
 y = tf.placeholder("float", [None, n_classes])
 
-
-# In[3]:
-
-
 # Create model
 def multilayer_perceptron(x, weights, biases):
     # Hidden layer with RELU activation
@@ -53,10 +36,6 @@ def multilayer_perceptron(x, weights, biases):
     # Output layer with linear activation
     out_layer = tf.matmul(layer_2, weights['out']) + biases['out']
     return out_layer
-
-
-# In[5]:
-
 
 # Store layers weight & bias
 weights = {
@@ -80,10 +59,6 @@ optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 # Initializing the variables
 init = tf.global_variables_initializer()
 
-
-# In[6]:
-
-
 # Launch the graph
 with tf.Session() as sess:
     sess.run(init)
@@ -102,7 +77,7 @@ with tf.Session() as sess:
             avg_cost += c / total_batch
         # Display logs per epoch step
         if epoch % display_step == 0:
-            print ("Epoch:", '%04d' % (epoch+1), "cost=",                 "{:.9f}".format(avg_cost))
+            print ("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(avg_cost))
     print ("Optimization Finished!")
 
     # Test model
@@ -110,4 +85,3 @@ with tf.Session() as sess:
     # Calculate accuracy
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
     print ("Accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels}))
-
