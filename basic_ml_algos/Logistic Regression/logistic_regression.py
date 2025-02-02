@@ -1,17 +1,9 @@
 
-# coding: utf-8
-
-# In[17]:
-
-
 #The idea of logistic regression is to make linear regression produce probabilities. 
 #Its always best to predict class probabilities instead of predicting classes. 
 #Logistic regression estimate class probabilities directly using the logit transform.
 #Linear regression might actually produce probabilities that could be less than 0, or even bigger than 1, logistic regression was introduced.
 #Logistic 0 to 1, Linear might take negaive values also
-
-
-# In[19]:
 
 
 import tensorflow as tf
@@ -20,9 +12,6 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 mnsit = input_data.read_data_sets("MNIST_data/", one_hot=True)
 print(mnsit)
-
-
-# In[20]:
 
 
 # Parameters
@@ -49,10 +38,6 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 
 # Initializing the variables
 init = tf.global_variables_initializer()
-
-
-# In[12]:
-
 
 # Launch the graph
 with tf.Session() as sess:
@@ -81,22 +66,3 @@ with tf.Session() as sess:
     # Calculate accuracy for 3000 examples
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     print ("Accuracy:", accuracy.eval({x: mnist.test.images[:3000], y: mnist.test.labels[:3000]}))
-
-Summarized Steps:
-Import data
-Parameters initialization (LR, epochs, batch size)
-Graph Input
-Model Weights
-Model Construction - Softmax used
-Error Minimization Algorithm
-Gradient Descent
-Initialize all Variables- (init = tf.global_variables_initializer())
-
-Launch the graph
-Training cycle 
-	Loop over all batches
-		Fit training using the batch
-		Compute average loss
-		
-Test
-Calculate the accuracy
