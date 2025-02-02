@@ -1,9 +1,10 @@
 
-# coding: utf-8
+"""
 An autoencoder is a type of artificial neural network used to learn efficient data codings in an unsupervised manner. 
 The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for the purpose of 
 'DIMENSIONALITY REDUCION'
-# In[ ]:
+"""
+
 
 
 from __future__ import division, print_function, absolute_import
@@ -15,9 +16,6 @@ import matplotlib.pyplot as plt
 # Import MINST data
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
-
-
-# In[2]:
 
 
 # Parameters
@@ -48,8 +46,6 @@ biases = {
     'decoder_b2': tf.Variable(tf.random_normal([n_input])),
 }
 
-
-# In[5]:
 
 
 # Building the encoder
@@ -90,9 +86,6 @@ optimizer = tf.train.RMSPropOptimizer(learning_rate).minimize(cost)
 init = tf.global_variables_initializer()
 
 
-# In[ ]:
-
-
 # Launch the graph
 # Using InteractiveSession (more convenient while using Notebooks)
 sess = tf.InteractiveSession()
@@ -130,6 +123,8 @@ plt.draw()
 
 plt.show()
 
+"""
+
 Steps :
 Import data
 Parameters initialization (LR, epochs, batch size)
@@ -150,6 +145,7 @@ Training cycle
 		
 Test
 Comparison of Original images with reconstructions
+"""
 
 
 
