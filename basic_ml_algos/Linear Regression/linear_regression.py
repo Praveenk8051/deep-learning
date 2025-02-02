@@ -1,12 +1,12 @@
 
-# coding: utf-8
+"""
 # Few points about Linear Regression:
 >Linear approach to modelling the relationship between dependent variable and one or more independent variables. 
 >The case of one independent variable is called Simple Linear Regression
 >For more than one independent variable, the process is called Multiple Linear Regression
 >Linear regression consists of finding the best-fitting straight line through the points. The best-fitting line is called a regression line.
 Real Life Example: https://towardsdatascience.com/linear-regression-in-real-life-4a78d7159f16
-# In[11]:
+"""
 
 
 import tensorflow as tf
@@ -23,15 +23,10 @@ rng = numpy.random
 #is a collection of command style functions that make matplotlib work like MATLAB.
 #Each pyplot function makes some change to a figure: 
 #e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area
-
-
 import matplotlib.pyplot as plt
 plt.plot([1,2,3,4])
 plt.ylabel('some numbers')
 plt.show()
-
-
-# In[13]:
 
 
 # Parameters
@@ -55,11 +50,6 @@ print(train_X)
 print(train_Y)
 print(n_samples)
 
-# The shape property is usually used to get the current shape of an array
-
-
-# In[18]:
-
 
 # tf Graph Input
 X = tf.placeholder("float")
@@ -72,16 +62,9 @@ print(W)
 print(b)
 print(rng.randn()) #Check!
 
-
-# In[19]:
-
-
 # Construct a linear model
 pred = tf.add(tf.multiply(X, W), b)
 print(pred)
-
-
-# In[20]:
 
 
 # Mean squared error
@@ -90,16 +73,8 @@ print(cost)
 # Gradient descent
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 
-
-# In[21]:
-
-
 # Initializing the variables
 init = tf.global_variables_initializer()
-
-
-# In[23]:
-
 
 # Launch the graph
 with tf.Session() as sess:
@@ -125,6 +100,7 @@ with tf.Session() as sess:
     plt.legend()
     plt.show()
 
+"""
 # Summarized Data
 Import libraries
 Generate random labels and inputs
@@ -138,3 +114,4 @@ Launch the graph
 Loop over all Training data
 	Display logs per epochs
 	Graph display
+ """
